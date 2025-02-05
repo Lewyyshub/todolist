@@ -17,6 +17,7 @@ function Tasks() {
       ...tasks,
       {
         value: newTask,
+        time: new Date().toLocaleTimeString(),
       },
     ]);
     setNewTask("");
@@ -38,6 +39,19 @@ function Tasks() {
     setTasks(updatedTasks);
   };
 
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+  }, []);
+
+  const hours = time.getHours().toString().padStart(2, "0");
+  const minutes = time.getMinutes().toString().padStart(2, "0");
+
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  const dayOfWeek = dayNames[time.getDay()];
+
   return (
     <>
       <div className="container">
@@ -45,9 +59,12 @@ function Tasks() {
           <div>
             <img src={flowers} alt="flowers" />
           </div>
-          {/* <div className="time">
-            <h1>6:23 AM</h1>
-          </div> */}
+          <div className="time">
+            <h1 className="day">{dayOfWeek}</h1>
+            <h1>
+              {hours}:{minutes}AM
+            </h1>
+          </div>
         </div>
         <div className="inputDiv">
           <input

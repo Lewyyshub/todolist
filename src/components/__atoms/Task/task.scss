@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Russo One";
+  src: url(../../../fonts/russo.ttf);
+}
 $ContainerColor: #fff;
 $ContainerBorder: 10px;
 .container {
@@ -87,6 +91,29 @@ $ContainerBorder: 10px;
   span {
     color: #888;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.time {
+  position: relative;
+  h1 {
+    color: #fff;
+    font-family: "Russo One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    right: 30px;
+    top: 130px;
+  }
+  .day {
+    top: 110px;
+    color: #fff;
+    font-family: "Russo One";
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
