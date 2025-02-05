@@ -1,0 +1,19 @@
+$TodoColor: #007fdb;
+$FontSize: 96px;
+$SecondFont: 30px;
+
+div {
+  display: flex;
+  h1 {
+    color: $TodoColor;
+    font-size: $FontSize;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 715px) {
+  h1 {
+    height: 100px;
+  }
+}

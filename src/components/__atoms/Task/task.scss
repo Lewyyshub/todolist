@@ -1,0 +1,123 @@
+$ContainerColor: #fff;
+$ContainerBorder: 10px;
+.container {
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  min-height: 636px;
+  background-color: $ContainerColor;
+  border-radius: $ContainerBorder;
+  gap: 23px;
+  div {
+    div {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.inputDiv {
+  width: 373px;
+  height: 49px;
+  margin-inline: auto;
+  display: flex;
+  gap: 10px;
+  input {
+    border-radius: 5px;
+    background: #ebeff2;
+    border: none;
+    width: 275px;
+    height: 49px;
+    width: 100%;
+    padding-left: 42px;
+    background-image: url(../../../images/mark.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+  button {
+    width: 88px;
+    height: 49px;
+    border-radius: 5px;
+    background: #20eeb0;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border: none;
+    font-size: 30px;
+    color: white;
+  }
+}
+// .time {
+//   width: 192px;
+//   height: 58px;
+//   position: absolute;
+//   top: 230px;
+//   left: 980px;
+//   h1 {
+//     color: #fff;
+//     font-size: 48px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//   }
+// }
+.tasks-div {
+  width: 373px;
+  height: 44px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.names {
+  display: flex;
+  flex-direction: column;
+  p {
+    color: #0d0d0d;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  span {
+    color: #888;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.delete {
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  button {
+    padding-top: 5px;
+    width: 37px;
+    height: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid green;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+input[type="checkbox"]:checked {
+  background-color: green;
+  border-color: green;
+}
