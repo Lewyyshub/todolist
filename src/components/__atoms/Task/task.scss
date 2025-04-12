@@ -81,13 +81,20 @@ $ContainerBorder: 10px;
 .names {
   display: flex;
   flex-direction: column;
+  height: auto;
   p {
     color: #0d0d0d;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
   }
+
   span {
     color: #888;
     font-size: 14px;
